@@ -1,0 +1,124 @@
+v 4
+file . ".\MemoriaCodigo.vhd" "c3ba829bfb4d667f10e81c22fe31831cda8674ba" "20250421161805.720":
+  entity memoriacodigo at 1( 0) + 0 on 1153;
+  architecture ar_memoriacodigo of memoriacodigo at 10( 219) + 0 on 1154;
+file . ".\UnidadControl_dp.vhd" "d2b36d118b4ea924b0521b94f2c26aa4a2b69e33" "20250421161751.356":
+  entity unidadcontrol_dp at 1( 0) + 0 on 1147;
+  architecture ar_unidadcontrol_dp of unidadcontrol_dp at 17( 492) + 0 on 1148;
+file . ".\Registro25Bits.vhd" "e4cea470e4468fca1c4acd08ed8055ebc35ba1a5" "20250421161706.268":
+  entity registro25bits at 1( 0) + 0 on 1131;
+  architecture ar_registro25bits of registro25bits at 10( 230) + 1 on 1132;
+file . ".\Mux256a125Bits.vhd" "dde0f6b7d94c42e8c2cca966411b39a29050d618" "20250421161731.841":
+  entity mux256a125bits at 1( 0) + 0 on 1139;
+  architecture ar_mux256a125bits of mux256a125bits at 27( 1811) + 0 on 1140;
+file . ".\Deco8a256.vhd" "47afada8e6c16033f2b2f2b27eab8b50ebac97a1" "20250421161637.685":
+  entity deco8a256 at 1( 0) + 0 on 1129;
+  architecture ar_deco8a256 of deco8a256 at 26( 1753) + 0 on 1130;
+file . ".\UnidadControl_uc.vhd" "e7a594d7ad15dd803ec355d130f2c0a3cd3714f5" "20250421161747.650":
+  entity unidadcontrol_uc at 1( 0) + 0 on 1145;
+  architecture ar_unidadcontrol_uc of unidadcontrol_uc at 16( 461) + 0 on 1146;
+file . ".\Mux256a18Bits.vhd" "8fe498fe72873ef0c533143166c83ca351c57247" "20250421161736.600":
+  entity mux256a18bits at 1( 0) + 0 on 1141;
+  architecture ar_mux256a18bits of mux256a18bits at 27( 1807) + 0 on 1142;
+file . ".\Mux256a1.vhd" "e0158253cc6f3398275409c47538d66560c0cb34" "20250421161728.287":
+  entity mux256a1 at 2( 2) + 0 on 1137;
+  architecture ar_mux256a1 of mux256a1 at 28( 1762) + 0 on 1138;
+file . "RegistroContador_tb.vhd" "bf44e442a0cf09712c3a0e3c15c9e49d9b4b79fd" "20250411033634.647":
+  entity registrocontador_tb at 1( 0) + 0 on 881;
+  architecture behavioral of registrocontador_tb at 8( 155) + 0 on 882;
+file . ".\UnidadFuncional.vhd" "8c2876276519fa4ce9d152fb5a080a3da71dbaa9" "20250420035108.984":
+  entity unidadfuncional at 1( 0) + 0 on 1027;
+  architecture ar_unidadfuncional of unidadfuncional at 43( 1129) + 0 on 1028;
+file . ".\Mux8a18Bits.vhd" "87949a0dd7e5029752abc7891fa381085bf1afa6" "20250330194112.858":
+  entity mux8a18bits at 2( 2) + 0 on 799;
+  architecture ar_mux8a18bits of mux8a18bits at 14( 270) + 0 on 800;
+file . ".\UnidadLogica.vhd" "235b4677a4342a80e6afb540e6aeab8d478a2236" "20250330044755.090":
+  entity unidadlogica at 1( 0) + 0 on 771;
+  architecture ar_unidadlogica of unidadlogica at 30( 805) + 0 on 772;
+file . ".\Shifter.vhd" "ba4f5baca1500e01c0875c8db7fd12e9d8033d3d" "20250421161718.561":
+  entity shifter at 1( 0) + 0 on 1135;
+  architecture ar_shifter of shifter at 25( 808) + 0 on 1136;
+file . ".\SumadorRestador8Bits.vhd" "3ef8c8ba2b59f8f4bad5ff07e86fb86b04b0f5ec" "20250330043740.240":
+  entity sumadorrestador8bits at 1( 0) + 0 on 763;
+  architecture ar_sumadorrestador8bits of sumadorrestador8bits at 17( 363) + 0 on 764;
+file . ".\Desplazador8Bits_FFD.vhd" "ff2a26fb3f5233e945a85043c35056a34279249d" "20250315213926.579":
+  entity desplazador8bits_ffd at 2( 2) + 0 on 749;
+  architecture ar_desplazador8bits_ffd of desplazador8bits_ffd at 13( 252) + 0 on 750;
+file . ".\Comparador.vhd" "38dd04b092aba826988145fd3ecc274c8ff1f925" "20250315024957.514":
+  entity comparador at 1( 0) + 0 on 555;
+  architecture ar_comparador of comparador at 11( 202) + 0 on 556;
+file . ".\Deco3a8.vhd" "7b988fa5404d938615216f8d30dec8b99295728e" "20250313212028.174":
+  entity deco3a8 at 1( 0) + 0 on 519;
+  architecture ar_deco3a8 of deco3a8 at 9( 192) + 0 on 520;
+file . ".\UnidadControl.vhd" "a72880447e68875c46b546b5dbec0f33a61812c1" "20250421161754.492":
+  entity unidadcontrol at 1( 0) + 0 on 1149;
+  architecture ar_unidadcontrol of unidadcontrol at 22( 1232) + 0 on 1150;
+file . ".\Datapath.vhd" "1de389259f904070a0878a700b684ae2546eb5c9" "20250421161815.984":
+  entity datapath at 1( 0) + 0 on 1157;
+  architecture ar_datapath of datapath at 23( 1226) + 0 on 1158;
+file . ".\Registro8Bits.vhd" "8164337d2944fb9c45f4d219b999be766cecb531" "20250309154154.371":
+  entity registro8bits at 5( 79) + 0 on 23;
+  architecture ar_registro8bits of registro8bits at 14( 305) + 1 on 24;
+file . ".\Mux4a1.vhd" "a5ce121670a0cafc05b29204e5458af93422e005" "20250309154140.113":
+  entity mux4a1 at 5( 105) + 0 on 19;
+  architecture ar_mux4a1 of mux4a1 at 14( 297) + 1 on 20;
+file . ".\Mux2a1.vhd" "473c5cd153f0ab802086251945d7ebfe91ad26fd" "20250309154129.045":
+  entity mux2a1 at 5( 99) + 0 on 15;
+  architecture ar_mux2a1 of mux2a1 at 13( 244) + 1 on 16;
+file . ".\FA.vhd" "d233151a3a9eb4f4eed3666321e815cf0731984b" "20250419041232.149":
+  entity fa at 6( 124) + 0 on 883;
+  architecture ar_fa of fa at 19( 512) + 1 on 884;
+file . ".\FFDW.vhd" "55d3689a08fccf46095e873f238848d883b4c4c9" "20250421161625.638":
+  entity ffdw at 3( 50) + 0 on 1125;
+  architecture ar_ffdw of ffdw at 11( 193) + 1 on 1126;
+file . ".\Mux2a18bits.vhd" "c44a9f9cd6d3450aa81fd98367d8a55e3f79905c" "20250330194003.116":
+  entity mux2a18bits at 6( 170) + 0 on 789;
+  architecture ar_mux2a18bits of mux2a18bits at 15( 389) + 1 on 790;
+file . ".\Mux4a18Bits.vhd" "d5c63ae2ab6d190be60e83b2f3f529fd185abf9f" "20250309154145.072":
+  entity mux4a18bits at 6( 177) + 0 on 21;
+  architecture ar_mux4a18bits of mux4a18bits at 15( 422) + 1 on 22;
+file . ".\Sumador8Bits.vhd" "89b6af9c6608241cb1c5397efae458166fe9eb14" "20250419041240.524":
+  entity sumador8bits at 6( 190) + 0 on 887;
+  architecture ar_sumador8bits of sumador8bits at 20( 585) + 1 on 888;
+file . ".\FFD.vhd" "5dbae18439f5ce512c04a959ab97bb3b3942cc2b" "20250313204456.006":
+  entity ffd at 3( 50) + 0 on 489;
+  architecture ar_ffd of ffd at 11( 188) + 1 on 490;
+file . "Circuito_tb.vhd" "5d175065f780e69b6ba8ec2cdaa8c6c29c7b9315" "20250421161818.633":
+  entity circuito_tb at 1( 0) + 0 on 1159;
+  architecture ar_circuito_tb of circuito_tb at 7( 90) + 0 on 1160;
+file . ".\Desplazador8Bits.vhd" "6df03f3b0980a73858ecdd054784f9443f9f7969" "20250315051040.731":
+  entity desplazador8bits at 2( 2) + 0 on 721;
+  architecture ar_desplazador8bits of desplazador8bits at 17( 444) + 0 on 722;
+file . ".\Datapath_tb.vhd" "480282f32a9d54d5dc4751479f21a34e195385b0" "20250315025313.607":
+  entity datapath_tb at 1( 0) + 0 on 561;
+  architecture test of datapath_tb at 8( 92) + 0 on 562;
+file . ".\ALU.vhd" "7631cfe1ce8fa96f62032b6e981586c1f71cd813" "20250421161800.634":
+  entity alu at 1( 0) + 0 on 1151;
+  architecture ar_alu of alu at 40( 984) + 0 on 1152;
+file . ".\UnidadAritmetica.vhd" "6c27e984e823e6d7bc512bac5abae67bccf528b3" "20250421161743.569":
+  entity unidadaritmetica at 1( 0) + 0 on 1143;
+  architecture ar_unidadaritmetica of unidadaritmetica at 36( 1032) + 0 on 1144;
+file . ".\UnidadRegistros.vhd" "654766b7dbed96c4b519dcfa103d5d257de3dd5c" "20250330194018.135":
+  entity unidadregistros at 1( 0) + 0 on 793;
+  architecture ar_unidadregistros of unidadregistros at 39( 1465) + 0 on 794;
+file . ".\Mux8a1.vhd" "130423b7cab6e434c269bc0125982e6425445a10" "20250330194108.551":
+  entity mux8a1 at 5( 117) + 0 on 797;
+  architecture ar_mux8a1 of mux8a1 at 14( 321) + 1 on 798;
+file . "RegistroContador.vhd" "7727ccb7cb71382365d206e4e4207cdfbf89c1ff" "20250411033634.578":
+  entity registrocontador at 1( 0) + 0 on 879;
+  architecture registrocontador of registrocontador at 12( 370) + 0 on 880;
+file . ".\Deco.vhd" "e643dc5a4734959ef87e5a7c9568cd5468a66240" "20250421161631.573":
+  entity deco at 1( 0) + 0 on 1127;
+  architecture ar_deco of deco at 10( 322) + 0 on 1128;
+file . ".\Mux256a122Bits.vhd" "05dd4451c289f8b2b01570ab0ac27bfc60a56f98" "20250419041715.754":
+  entity mux256a122bits at 1( 0) + 0 on 893;
+  architecture ar_mux256a122bits of mux256a122bits at 27( 1811) + 0 on 894;
+file . ".\Registro22Bits.vhd" "ac3d36743915007153d9ec4641ad9e3fbfa733a6" "20250419041737.362":
+  entity registro22bits at 1( 0) + 0 on 897;
+  architecture ar_registro22bits of registro22bits at 10( 230) + 1 on 898;
+file . ".\MemoriaDatos.vhd" "9341d221fc0b5a0bec1cbb8afd26112f6c917fd2" "20250421161809.086":
+  entity memoria at 1( 0) + 0 on 1155;
+  architecture ar_memoria of memoria at 11( 257) + 0 on 1156;
+file . ".\Registro31Bits.vhd" "080ad116552f83ed47bbe438c7a8a6f06b005150" "20250421161709.054":
+  entity registro31bits at 1( 0) + 0 on 1133;
+  architecture ar_registro31bits of registro31bits at 10( 230) + 1 on 1134;
