@@ -1,16 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
--- Shifter
--- El Shifter realiza desplazamientos y rotaciones
--- sobre un dato de 8 bits D, y una señal de control de 2 bits S.
--- Las operaciones que realiza son:
--- 00 -> desplazamiento a la izquierda
--- 01 -> desplazamiento a la derecha
--- 10 -> rotación a la izquierda
--- 11 -> rotación a la derecha
--- La salida del Shifter es Q de 8 bits.
-
 entity Shifter is
     port (
         d: in std_logic_vector(7 downto 0);     -- Entrada de 8 bits

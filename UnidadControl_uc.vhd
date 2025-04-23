@@ -8,10 +8,10 @@ entity UnidadControl_uc is
         clk: in std_logic;  -- Señal de reloj
         mb: out std_logic;
         mpc: out std_logic;
-        wir, wcw, wpc: out std_logic  -- Señales de control de escritura para los registros de 8, 22 y 31 bits
+        wir, wcw, wpc: out std_logic;  -- Señales de control de escritura para los registros de 8, 22 y 31 bits
+        exe: out std_logic  -- Señal de ejecución
     );
 end UnidadControl_uc;
-
 
 architecture Ar_UnidadControl_uc of UnidadControl_uc is
     component FFD is
@@ -68,10 +68,8 @@ begin
     wpc <= wpcx;
     mb <= mbx;
     mpc <= mpcx;
-
+    exe <= C;
         
 
 
 end Ar_UnidadControl_uc;
-
-

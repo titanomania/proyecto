@@ -18,10 +18,10 @@ entity UnidadControl is
     );
 end UnidadControl;
 
-
 architecture Ar_UnidadControl of UnidadControl is
     component UnidadControl_dp is
         port (
+            exe: in std_logic;  -- Señal de ejecución
             mb: in std_logic;
             mpc: in std_logic;
             wir, wcw, wpc: in std_logic;  -- Señales de control de escritura para los registros de 8, 22 y 31 bits
@@ -39,19 +39,20 @@ architecture Ar_UnidadControl of UnidadControl is
             clk: in std_logic;  -- Señal de reloj
             mb: out std_logic;
             mpc: out std_logic;
-            wir, wcw, wpc: out std_logic  -- Señales de control de escritura para los registros de 8, 22 y 31 bits
+            wir, wcw, wpc: out std_logic;  -- Señales de control de escritura para los registros de 8, 22 y 31 bits
+            exe: out std_logic  -- Señal de ejecución
         );
     end component;
 
     signal mbx, mpcx, wirx, wcwx, wpcx: std_logic; -- señales de control de escritura para los registros de 8, 22 y 31 bits
     signal jump, sv: std_logic;  -- Señales de control de salto y de la unidad funcional
     signal word: std_logic_vector(30 downto 0);  -- Señal de control de 5 bits para la unidad funcional
+    signal exe: std_logic;  -- Señal de ejecución
 begin
-
     -- Instanciación de la unidad de control de datos
-    UC_dp: UnidadControl_dp port map(mbx, mpcx, wirx, wcwx, wpcx, clk, c, v, sg, z, word, jump, sv);
+    UC_dp: UnidadControl_dp port map(exe, mbx, mpcx, wirx, wcwx, wpcx, clk, c, v, sg, z, word, jump, sv);
 
-    UC_uc: UnidadControl_uc port map(sv, jump, clk, mbx, mpcx, wirx, wcwx, wpcx);
+    UC_uc: UnidadControl_uc port map(sv, jump, clk, mbx, mpcx, wirx, wcwx, wpcx, exe);
 
     S <= word(30 downto 26);  -- Asignación de la señal de control de 5 bits para la unidad funcional
     DC <= word(25 downto 23);  -- Asignación de la señal de control de 3 bits para seleccionar el registro de entrada de la UR

@@ -1,24 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-
--- Unidad Aritmetica
--- La unidad aritmetica realiza operaciones aritmeticas
--- sobre dos operandos de 8 bits A y B, y una señal de control de 3 bits S.
--- Las operaciones que realiza son:
--- 000 -> A + B
--- 001 -> A - B
--- 010 -> A++
--- 011 -> A--
--- 100 -> TRANSFERENCIA A
--- 101 -> TRANSFERENCIA B
--- 110 -> A + B + Acarreo
--- 111 -> B++
--- La salida de la unidad aritmetica es R de 8 bits, el acarreo de salida c,
--- el overflow v, el signo s y el cero z.
-
-
-
 entity UnidadAritmetica is
     port (
         A, B: in std_logic_vector(7 downto 0);  -- Entrada de 8 bits
@@ -64,8 +46,6 @@ begin
     Ax(6) <= (not(S(1)) and not(S(0)) and A(6)) or (not(S(2)) and A(6)) or (S(1) and not(S(0)) and A(6));
     Ax(7) <= (not(S(1)) and not(S(0)) and A(7)) or (not(S(2)) and A(7)) or (S(1) and not(S(0)) and A(7));
 
-    
-
     Bx(0) <= (S(2) and B(0)) or (not(S(2)) and not(S(1)) and not(S(0)) and B(0)) or (not(S(2))  and not(S(1)) and S(0) and not(B(0))) or (not(S(2)) and S(1) and S(0));
     Bx(1) <= (S(2) and B(1)) or (not(S(2)) and not(S(1)) and not(S(0)) and B(1)) or (not(S(2))  and not(S(1)) and S(0) and not(B(1))) or (not(S(2)) and S(1) and S(0));
     Bx(2) <= (S(2) and B(2)) or (not(S(2)) and not(S(1)) and not(S(0)) and B(2)) or (not(S(2))  and not(S(1)) and S(0) and not(B(2))) or (not(S(2)) and S(1) and S(0));
@@ -75,10 +55,6 @@ begin
     Bx(6) <= (S(2) and B(6)) or (not(S(2)) and not(S(1)) and not(S(0)) and B(6)) or (not(S(2))  and not(S(1)) and S(0) and not(B(6))) or (not(S(2)) and S(1) and S(0));
     Bx(7) <= (S(2) and B(7)) or (not(S(2)) and not(S(1)) and not(S(0)) and B(7)) or (not(S(2))  and not(S(1)) and S(0) and not(B(7))) or (not(S(2)) and S(1) and S(0));
 
-
-
-
-    
     Sumador0: Sumador8Bits port map (Ax, Bx, Cinx, Rx, Coutx, vx, sx, zx);
 
     R <= Rx;

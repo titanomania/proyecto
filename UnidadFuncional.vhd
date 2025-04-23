@@ -1,32 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
--- Unidad Funcional
--- La unidad funcional realiza operaciones aritméticas, lógicas y de desplazamiento
--- sobre dos operandos de 8 bits A y B, y una señal de control de 5 bits S.
--- Las operaciones que realiza son:
--- 00000 -> A + B
--- 00001 -> A - B
--- 00010 -> A++
--- 00011 -> A--
--- 00100 -> B++
--- 00101 -> B--
--- 00110 -> TRANSFERENCIA A
--- 00111 -> TRANSFERENCIA B
--- 01000 -> A and B
--- 01001 -> A or B
--- 01010 -> not A
--- 01011 -> not B
--- 01100 -> A xor B
--- 01101 -> not (A and B)
--- 01110 -> not (A or B)
--- 01111 -> not (A xor B)
--- 10000 -> <-- desplazamiento a la izquierda
--- 10001 -> --> desplazamiento a la derecha
--- 10010 -> rotación a la izquierda
--- 10011 -> rotación a la derecha
-
-
 entity UnidadFuncional is
     port(
         A, B: in std_logic_vector(7 downto 0);

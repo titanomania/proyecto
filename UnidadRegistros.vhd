@@ -1,28 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
--- Unidad de Registros
--- La unidad de registros almacena 8 registros de 8 bits cada uno.
--- La unidad de registros tiene 3 señales de control de 3 bits cada una,
--- DA, DB y DC, que seleccionan el registro de entrada y salida.
--- La unidad de registros tiene una señal de control de 1 bit w,
--- que indica si se debe escribir en el registro seleccionado.
--- La unidad de registros tiene una señal de reloj clk,
--- que sincroniza la escritura en los registros.
--- La unidad de registros tiene dos salidas A y B de 8 bits cada una,
--- que son las salidas de los registros seleccionados por DA y DB.
--- La unidad de registros tiene una entrada C de 8 bits,
--- que es la entrada de datos a los registros seleccionados por DC.
--- 000 -> Reg0
--- 001 -> Reg1
--- 010 -> Reg2
--- 011 -> Reg3
--- 100 -> Reg4
--- 101 -> Reg5
--- 110 -> Reg6
--- 111 -> Reg7
-
-
 entity UnidadRegistros is
     port (
         C: in std_logic_vector(7 downto 0);  -- Entrada de 8 bits
@@ -34,7 +12,6 @@ entity UnidadRegistros is
         A, B: out std_logic_vector(7 downto 0)  -- Salida de 8 bits
     );
 end UnidadRegistros;
-
 
 architecture Ar_UnidadRegistros of UnidadRegistros is
     component Mux8a18Bits is

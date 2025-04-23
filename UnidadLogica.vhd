@@ -1,21 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
--- Unidad lógica
--- La unidad lógica realiza operaciones lógicas
--- sobre dos operandos de 8 bits A y B, y una señal de control de 3 bits S.
--- Las operaciones que realiza son:
--- 000 -> A and B
--- 001 -> A or B
--- 010 -> not A
--- 011 -> not B
--- 100 -> A xor B
--- 101 -> not (A and B)
--- 110 -> not (A or B)
--- 111 -> not (A xor B)
--- La salida de la unidad lógica es R de 8 bits.
-
-
 entity UnidadLogica is
     port (
         A, B: in std_logic_vector(7 downto 0);  -- Entrada de 8 bits
@@ -61,9 +46,6 @@ begin
 
     -- Multiplexor de 8 a 1
     Mux8a1: Mux8a18Bits port map (ANDX, ORX, NOTAX, NOTBX, XORX, NOTANDX, NOTORX, NOTXORX, S, Rx);
-
-
-
 
     R <= Rx;
 

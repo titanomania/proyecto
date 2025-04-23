@@ -3,6 +3,7 @@ use IEEE.std_logic_1164.all;
 
 entity UnidadControl_dp is
     port (
+        exe: in std_logic;  -- Señal de ejecución
         mb: in std_logic;
         mpc: in std_logic;
         wir, wcw, wpc: in std_logic;  -- Señales de control de escritura para los registros de 8, 25 y 31 bits
@@ -12,7 +13,6 @@ entity UnidadControl_dp is
         jump, sv: out std_logic
     );
 end UnidadControl_dp;
-
 
 architecture Ar_UnidadControl_dp of UnidadControl_dp is
     component Registro8Bits is
@@ -80,7 +80,6 @@ architecture Ar_UnidadControl_dp of UnidadControl_dp is
     signal cx, cnx, vx, vnx, sgx, sgnx, zx, znx: std_logic;  -- Señales de control para el multiplexor de 8 bits
     signal Sx: std_logic_vector(4 downto 0);  -- Señal de control de la unidad funcional
 
-
 begin
 
     Reg_IR: Registro25Bits port map (irx, wir, clk, irx_out);  -- Registro de 25 bits para la instrucción
@@ -111,17 +110,16 @@ begin
     zx <= z;
     znx <= not(z);
 
-
     mux_sv0: Mux8a1 port map (cx, cnx, vx, vnx, sgx, sgnx, zx, znx, mux_sv, svx);  -- Multiplexor de 8 a 1 para la señal sv
 
     word <= cwx_out;  -- Salida de la unidad de control
     -- las señales de escritura de los registros, flip-flops y memoria de datos, solo se activan cuando la unidad de control lo indica en el estado que corresponde
-    word(16) <= wcw and cwx_out(16);
-    word(12) <= wcw and cwx_out(12);
-    word(11) <= wcw and cwx_out(11);
-    word(10) <= wcw and cwx_out(10);
-    word(9) <= wcw and cwx_out(9);
-    word(8) <= wcw and cwx_out(8);
+    word(16) <= exe and cwx_out(16);
+    word(12) <= exe and cwx_out(12);
+    word(11) <= exe and cwx_out(11);
+    word(10) <= exe and cwx_out(10);
+    word(9) <= exe and cwx_out(9);
+    word(8) <= exe and cwx_out(8);
     sv <= svx or (Sx(4) and Sx(3) and not(Sx(2)) and not(Sx(1)) and not(Sx(0)));  -- Salida de la señal de control sv
     jump <= jumpx;  -- Salida de la señal de salto
     

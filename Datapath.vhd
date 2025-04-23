@@ -1,8 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
--- Datapath
-
 entity Datapath is
     port (
         DC: in std_logic_vector(2 downto 0);  -- Señal de control de 3 bits para seleccionar el registro de entrada de la UR
@@ -112,7 +110,3 @@ begin
     z <= ufZ_ffd;
     
 end Ar_Datapath;
-
-
-
-
